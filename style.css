@@ -4,20 +4,20 @@
     margin: 0;
 }
 /* Variables */
-:root{
-    --primero: #89BDD3;
-    --segundo: #9AD3DE;
-    --tercero: #D7FBFB;
+:root {
+    --primero: #89bdd3;
+    --segundo: #9ad3de;
+    --tercero: #d7fbfb;
     --texto-blanco: rgb(247, 247, 247);
     --texto-negro: rgb(95, 95, 95);
-    --overlay: linear-gradient(0deg,rgba(0, 0, 0, 0.307),rgba(0, 0, 0, 0.514));
+    --overlay: linear-gradient(0deg, rgba(0, 0, 0, 0.307), rgba(0, 0, 0, 0.514));
     --background-img: url('img/cover.jpg');
-    --overlay2: linear-gradient(0deg,rgba(255, 255, 255, 0.85),rgba(255, 255, 255, 0.85));
+    --overlay2: linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
     --background-img2: url('img/portada2.jpg');
     --iconos: rgb(188, 238, 238);
-}   
+}
 /* Estilos Generales */
-body{
+body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 100vh) 100px;
@@ -31,23 +31,21 @@ h1 {
 h2 {
     font-size: 38px;
 }
-h3{
+h3 {
     display: inline;
     font-size: 20px;
 }
-p{
+p {
     font-size: 18px;
 }
-a{
+a {
     text-decoration: none;
     color: var(--texto);
 }
-i{
-   
+i {
     font-size: 24px;
 }
-button{
-    
+button {
     border: 2px solid var(--texto-blanco);
     color: var(--texto-blanco);
     font-family: 'Quicksand', sans-serif;
@@ -65,129 +63,137 @@ button{
     padding: 0 1rem;
     font-size: 25px;
 }
-.second-level li{
-    margin-left: 1rem; 
+.second-level li {
+    margin-left: 1rem;
 }
 /* Secciones */
-.hero>div, .seccion1>div, .seccion2>div, footer{
+.hero > div,
+.seccion1 > div,
+.seccion2 > div,
+footer {
     padding: 3rem;
 }
 .mobile {
     display: none;
 }
-.hero{
+.hero {
     display: grid;
     grid-template-columns: 100px 3fr 3fr 2fr;
     grid-template-rows: 5fr 1fr;
-    grid-template-areas: 
-    "aside portada portada portada"
-    "aside link1 link2 contacto"
+    grid-template-areas:
+        'aside portada portada portada'
+        'aside link1 link2 contacto';
 }
-.aside{
+.aside {
     grid-area: aside;
     background: var(--primero);
-    color: var(--texto-negro);     
+    color: var(--texto-negro);
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
     padding: 30px !important;
 }
 
-.logo{
+.logo {
     writing-mode: vertical-rl;
     text-orientation: sideways;
 }
-.icons{
-   align-self: end;
-   justify-self: center;
-   text-align: center;
+.icons {
+    align-self: end;
+    justify-self: center;
+    text-align: center;
 }
-.icons a{
+.icons a {
     display: block;
     padding: 8px 0px;
 }
-.icons i{
+.icons i {
     color: var(--texto);
     font-size: 24px;
 }
-.portada p{
+.portada p {
     width: 50%;
 }
-.portada{
+.portada {
     grid-area: portada;
     background-image: var(--overlay), var(--background-img);
-    color: var(--texto-blanco);    
+    color: var(--texto-blanco);
     background-size: cover;
     background-position: center center;
 }
-.link1 p, .link2 p, .contacto p{
+.link1 p,
+.link2 p,
+.contacto p {
     font-size: 15px;
 }
-.link1{
+.link1 {
     grid-area: link1;
     background: var(--segundo);
 }
-.link2{
+.link2 {
     grid-area: link2;
-    
 }
-.contacto{
+.contacto {
     grid-area: contacto;
     background: var(--tercero);
-
 }
-.seccion1{
+.seccion1 {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 3fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "titulo titulo titulo side"
-    "cuadro1 cuadro2 cuadro3 side";
+    grid-template-areas:
+        'titulo titulo titulo side'
+        'cuadro1 cuadro2 cuadro3 side';
 }
-.titulo{
+.titulo {
     grid-area: titulo;
     background: var(--tercero);
 }
-.titulo p{    
+.titulo p {
     width: 70%;
-    text-align: justify;    
+    text-align: justify;
 }
-.cuadro1{
+.cuadro1 {
     grid-area: cuadro1;
     background: white;
 }
 
-.cuadro1 p, .cuadro2 p, .cuadro1 ul, .cuadro2 ul, .cuadro3 ul {
+.cuadro1 p,
+.cuadro2 p,
+.cuadro1 ul,
+.cuadro2 ul,
+.cuadro3 ul {
     text-align: left;
-    
 }
-.cuadro1 i, .cuadro2 i, .cuadro3 i{
+.cuadro1 i,
+.cuadro2 i,
+.cuadro3 i {
     font-size: 40px;
     color: var(--iconos);
 }
-.cuadro2{
+.cuadro2 {
     grid-area: cuadro2;
     background: var(--segundo);
 }
-.cuadro3{
+.cuadro3 {
     grid-area: cuadro3;
     background: var(--primero);
 }
-.side{
+.side {
     grid-area: side;
     background-image: url('img/seccion.jpg');
     background-size: cover;
     background-position: center top;
 }
-.seccion2{
+.seccion2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 3fr 2fr;
-    grid-template-areas: 
-    "portada portada portada"
-    "final1 final2 final3";
+    grid-template-areas:
+        'portada portada portada'
+        'final1 final2 final3';
 }
-.portada2{
+.portada2 {
     grid-area: portada;
     background-image: var(--overlay2), var(--background-img2);
     background-attachment: fixed;
@@ -201,27 +207,27 @@ button{
     color: black;
     line-height: 1.75rem;
 }
-.final1{
+.final1 {
     grid-area: final1;
     background: var(--primero);
 }
-.final2{
+.final2 {
     grid-area: final2;
     background: var(--segundo);
 }
-.final3{
+.final3 {
     grid-area: final3;
-    background: var(--tercero);    
+    background: var(--tercero);
 }
 /* Responsive */
-@media only screen and (max-width: 599px){
+@media only screen and (max-width: 599px) {
     .desktop {
         display: none;
     }
     .mobile {
         display: block;
     }
-    p{
+    p {
         font-size: 15px;
     }
     h1 {
@@ -234,66 +240,68 @@ button{
         font-size: 18px;
     }
 
-    body{
+    body {
         grid-template-rows: repeat(3, minmax(100vh, auto)) auto;
     }
-    .hero>div, .seccion1>div, .seccion2>div, footer{
+    .hero > div,
+    .seccion1 > div,
+    .seccion2 > div,
+    footer {
         padding: 20px;
     }
-    .hero{
+    .hero {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 70px 1fr repeat(2, 100px);
         grid-template-areas:
-        "aside aside" 
-        "portada portada"        
-        "link1 link2"
-        "contacto contacto";
+            'aside aside'
+            'portada portada'
+            'link1 link2'
+            'contacto contacto';
     }
-    .aside{       
+    .aside {
         display: grid;
         grid-template-columns: auto 1fr;
-      
     }
-    .portada p{
+    .portada p {
         width: auto;
     }
-    .portada{
+    .portada {
         text-align: right;
     }
     .icons {
         align-self: auto;
         justify-self: end;
     }
-    .icons a{
-        
+    .icons a {
         display: inline;
         padding: 0px 2px;
     }
     .icons a i {
         font-size: 12px;
     }
-    .logo{
+    .logo {
         writing-mode: horizontal-tb;
     }
-    .contacto{
-        text-align: center; 
+    .contacto {
+        text-align: center;
     }
-    .seccion1{
-        grid-template-columns: 1fr 1fr ;
+    .seccion1 {
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto auto;
-        grid-template-areas: 
-        "side titulo"
-        "cuadro1 cuadro1" 
-        "cuadro2 cuadro2"
-        "cuadro3 cuadro3";
+        grid-template-areas:
+            'side titulo'
+            'cuadro1 cuadro1'
+            'cuadro2 cuadro2'
+            'cuadro3 cuadro3';
         text-align: center !important;
-        
     }
-    .cuadro1 ul, .cuadro2 ul, .cuadro3 ul{
+    .cuadro1 ul,
+    .cuadro2 ul,
+    .cuadro3 ul {
         text-align: center;
         list-style: none;
     }
-    .titulo p{
+    .titulo p {
         width: 100%;
     }
     .inline i {
@@ -303,26 +311,26 @@ button{
         padding: 0;
         font-size: 20px;
     }
-    .seccion2{
+    .seccion2 {
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr 1fr 1fr;
-        grid-template-areas: 
-        "portada"
-        "final1"
-        "final2"
-        "final3";
+        grid-template-areas:
+            'portada'
+            'final1'
+            'final2'
+            'final3';
     }
     .portada2 p {
         width: 100%;
     }
-    .btn-dark{
+    .btn-dark {
         display: block;
         float: none !important;
     }
     footer i {
         font-size: 12px;
     }
-    footer  span {
+    footer span {
         display: block;
         float: none !important;
     }
