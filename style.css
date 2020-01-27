@@ -17,7 +17,7 @@
     --iconos: rgb(188, 238, 238);
 }
 /* Estilos Generales */
-body {
+.site {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 100vh) 100px;
@@ -40,10 +40,17 @@ p {
 }
 a {
     text-decoration: none;
-    color: var(--texto);
+    color: rgb(64, 114, 160);
+}
+a:hover {
+    text-decoration: underline;
 }
 i {
     font-size: 24px;
+}
+hr {
+    border-top: 0.05em solid var(--texto-blanco);
+    margin-top: 0.75rem;
 }
 button {
     border: 2px solid var(--texto-blanco);
@@ -140,7 +147,7 @@ footer {
 .seccion1 {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 3fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     grid-template-areas:
         'titulo titulo titulo side'
         'cuadro1 cuadro2 cuadro3 side';
@@ -188,7 +195,7 @@ footer {
 .seccion2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3fr 2fr;
+    grid-template-rows: 2fr 3fr;
     grid-template-areas:
         'portada portada portada'
         'final1 final2 final3';
